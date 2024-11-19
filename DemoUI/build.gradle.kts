@@ -26,12 +26,12 @@ tasks.withType<JavaCompile> {
 
 application {
     mainModule.set("org.example.beginners")
-    mainClass.set("org.example.beginners.Demo.StartVsShownJavaFXApp")
+    mainClass.set("org.example.beginners.Demo.FxmlDemo")
 }
 
 javafx {
     version = "17"
-    modules("javafx.controls", "javafx.graphics")
+    modules("javafx.controls", "javafx.graphics","javafx.fxml")
 }
 
 dependencies {
@@ -41,6 +41,14 @@ dependencies {
 
 tasks.test {
     useJUnitPlatform()
+}
+
+sourceSets {
+    main {
+        resources {
+            srcDirs("src/main/resources")
+        }
+    }
 }
 
 jlink {
