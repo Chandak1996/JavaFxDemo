@@ -43,6 +43,7 @@ tasks.test {
     useJUnitPlatform()
 }
 
+/*
 sourceSets {
     main {
         resources {
@@ -50,6 +51,7 @@ sourceSets {
         }
     }
 }
+*/
 
 jlink {
     imageZip.set(file("${buildDir}/distributions/app-${javafx.platform.classifier}.zip"))

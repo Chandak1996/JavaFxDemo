@@ -17,7 +17,8 @@ public class FxmlDemo extends Application {
         System.out.println("FXML Path: " + getClass().getResource("/Styles.css"));
 
         FXMLLoader loader = new FXMLLoader(getClass().getResource("/Main.fxml"));
-        StackPane root = loader.load();
+        StackPane root =  new StackPane();
+        root.getChildren().add(loader.load());
 
         // Set up the scene
         Scene scene = new Scene(root, 300, 200);
